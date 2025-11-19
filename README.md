@@ -29,7 +29,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img width="1363" height="948" alt="image" src="https://github.com/user-attachments/assets/cc35d549-7d82-447f-a98f-ac0d0a9aea88" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/cc35d549-7d82-447f-a98f-ac0d0a9aea88" />
 </p>
 <p>
 dc-1 created
@@ -37,7 +37,7 @@ dc-1 created
 <br />
 
 <p>
-<img width="1062" height="984" alt="image" src="https://github.com/user-attachments/assets/9ba9f433-41d0-43fd-a2b1-3819c66de4e5" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/9ba9f433-41d0-43fd-a2b1-3819c66de4e5" />
 </p>
 <p>
 Here, we ensured this vm is on the same vnet
@@ -87,7 +87,7 @@ Instaled AD
 <br />
 
 <p>
-<img width="1188" height="966" alt="image" src="https://github.com/user-attachments/assets/bb621a6a-5b06-4803-ba24-fa93b5fa4686" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/bb621a6a-5b06-4803-ba24-fa93b5fa4686" />
 </p>
 <p>
 Promoted to domain controller
@@ -95,7 +95,7 @@ Promoted to domain controller
 <br />
 
 <p>
-<img width="400" height="550" alt="image" src="https://github.com/user-attachments/assets/deb2a9c5-adbc-4646-bb69-7a1f2c9be582" /> <img width="400" alt="image" src="https://github.com/user-attachments/assets/931107ca-0fbc-494f-8411-5238e2bbcae3" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/deb2a9c5-adbc-4646-bb69-7a1f2c9be582" /> <img width="400" alt="image" src="https://github.com/user-attachments/assets/931107ca-0fbc-494f-8411-5238e2bbcae3" />
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/42559932-4371-45a0-8d9f-e11801156cd1" />
 
 </p>
@@ -105,7 +105,7 @@ OUs admin employees
 <br />
 
 <p>
-<img width="1002" height="713" alt="image" src="https://github.com/user-attachments/assets/c734688d-da52-4845-825b-a57395b24d53" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/c734688d-da52-4845-825b-a57395b24d53" />
 </p>
 <p>
 JANE admin
@@ -113,7 +113,7 @@ JANE admin
 <br />
 
 <p>
-<img width="1246" height="839" alt="image" src="https://github.com/user-attachments/assets/0e68de8f-049f-4c56-980c-34d86d3808b4" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/0e68de8f-049f-4c56-980c-34d86d3808b4" />
 </p>
 <p>
 domain admins
@@ -121,7 +121,7 @@ domain admins
 <br />
 
 <p>
-<img width="1574" height="1019" alt="image" src="https://github.com/user-attachments/assets/86c3b8a1-e5bf-45eb-8db8-58ebc8b2a8da" /> <img width="499" height="341" alt="image" src="https://github.com/user-attachments/assets/b4823c58-c32e-4ccb-887b-7f05bef446f8" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/86c3b8a1-e5bf-45eb-8db8-58ebc8b2a8da" /> <img width="600" alt="image" src="https://github.com/user-attachments/assets/b4823c58-c32e-4ccb-887b-7f05bef446f8" />
 </p>
 <p>
 Joined domain. Because we configured the dns settings to set the client-1's ip address to be the same as dc-1's ip address, it was able to locate the domain controller for mydomain.com. Then we logged in as Jane, an admin, and created a new organizational unit to put client-1 in.
@@ -141,22 +141,6 @@ Domain users to connect
 </p>
 <p>
 Within powershell, I logged in as admin to create 1000 users to our domain
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
 
