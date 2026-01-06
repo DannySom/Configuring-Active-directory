@@ -199,7 +199,8 @@ The _CLIENTS OU is used to keep clients together and to make management easier s
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/2a70dc62-ac11-44d6-8d01-24f365918625" />
 </p>
 <p>
-
+Now I'm going to setup Remote Desktop for non-administrative users on Client-1. This is to allow regular domain users (not just admins) to remotely log into Client-1.</p>
+  This is to simulate a real-world IT environment where employees need remote access to their workstations and to allow for testing of user logins and remote support scenarios. </p> So if a client needs remote support, this will allow admins to remote into their workstation to provide easier technical support and troubleshooting instead of telling the user where to go. </p>
 </p>
 <br />
 
