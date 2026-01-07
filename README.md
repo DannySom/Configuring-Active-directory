@@ -23,10 +23,12 @@ Active Directory is a software built and maintained by Microsoft that centrally 
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1: Prepare AD Infrastructure in Azure
+- Step 2: Deploy Active Directory
+- Step 3: Join Client Machines to the Domain
+- Step 4: Configure Remote Desktop Access
+- Step 5: Organizational Unit (OU) Setup
+- Step 6: Bulk User Creation with PowerShell
 
 <h2>Setting up and configuring Azure Virtual Machines for Active Directory</h2>
 
@@ -35,7 +37,7 @@ Active Directory is a software built and maintained by Microsoft that centrally 
 </p>
 <p>
 I deployed DC-1 VM which is going to be the domain controller in the Active Directory lab. </p>
-This domain controller manages user accounts, authentication, and security policies for the network domain. </p>In this setup, DC-1 will also act as the DNS server, which is essential for your client VM (Client-1) to find and join the domain.
+This domain controller manages user accounts, authentication, and security policies for the network domain. </p>In this setup, DC-1 will also act as the DNS server, which is essential for my client VM (Client-1) to find and join the domain.
 </p>
 <br />
 
@@ -199,8 +201,9 @@ The _CLIENTS OU is used to keep clients together and to make management easier s
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/2a70dc62-ac11-44d6-8d01-24f365918625" />
 </p>
 <p>
-Now I'm going to setup Remote Desktop for non-administrative users on Client-1. This is to allow regular domain users (not just admins) to remotely log into Client-1.</p>
-  This is to simulate a real-world IT environment where employees need remote access to their workstations and to allow for testing of user logins and remote support scenarios. </p> So if a client needs remote support, this will allow admins to remote into their workstation to provide easier technical support and troubleshooting instead of telling the user where to go. </p>
+Now I'm going to setup Remote Desktop for non-administrative users on Client-1. </p>
+This is because I want to allow regular domain users (not just admins) to remotely log into Client-1.</p>
+  This is to simulate a real-world IT environment where employees will need remote access to their workstations and to allow for testing of user logins and remote support scenarios. </p> So if a client needs remote technical support,  instead of telling the user what to click and where to go, this will allow admins to remote into their workstation to provide easier technical support and troubleshooting. </p>
 </p>
 <br />
 
@@ -208,62 +211,17 @@ Now I'm going to setup Remote Desktop for non-administrative users on Client-1. 
 <img width="1275" height="857" alt="image" src="https://github.com/user-attachments/assets/49e526e0-0d72-45a1-8485-3e7a56f0b404" />
 </p>
 <p>
-Within powershell, I logged in as admin to create 1000 users to our domain
+<ins>Next, I'm going to create a bunch of additional users and attempt to log into client-1 with one of the users.</ins>
+  
+   - Log in to DC-1 and open PowerShell_ise as an administrator:
+        - Search for PowerShell ISE.
+        - Right-click and select Run as administrator to open it with elevated privileges.
+   - Create a new file and paste the script:
+        - In PowerShell ISE, go to File > New to create a new script file.
+        - Copy the provided [PowerShell script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) and paste it into the new file.
+Now if I go to ADUC and navigate to _EMPLOYEES OU, I can see the newly created user accounts.
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+In the next section of the project, I will configure Group Policies for testing and simulating password resets, account lockouts, and user permissions for Help Desk practices. </p>
+https://github.com/DannySom/Group-Policy-Objects
